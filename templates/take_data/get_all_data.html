@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>get_all_data</title>
+</head>
+<body>
+{% for d in data %}
+    <p>name: {{ d.name }}</p>
+    <p>sure_name: {{ d.sure_name }}</p>
+    <p>pesel: {{ d.pesel }}</p>
+    {% if d.email %}
+        <p>email: {{ d.email }}</p>
+    {% endif %}
+    {% if d.phone %}
+        <p>phone: {{ d.phone }}</p>
+    {% endif %}
+<br>
+{% endfor %}
+</body>
+</html>
